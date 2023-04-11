@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+	<title>Exp-14</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: verdana;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(189, 188, 188);
+        }
+
+        #time {
+            font-size: 70px;
+            color: #158a56;
+        }
+
+
+        #buttons {
+            margin: 20px;
+        }
+
+        .btn {
+            align-items: center;
+            width: 100px;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5%;
+            cursor: pointer;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            background-color: rgb(168, 165, 165);
+            border-color: rgb(184, 183, 183);
+        }
+
+        .added{
+            display: block;
+            padding: 0 10px;
+            font-size: 30px;
+        }
+
+        .butt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .savelap .btn{
+            width: 350px;
+        }
+
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="time">
+			<span class="digit" id="min">00</span>:<span class="digit" id="sec">00</span>:<span class="digit" id="count">00</span>
+		</div>
+        <div class="lapped" id="lap">
+        </div>
+        <div class="butt">
+            <div id="buttons">
+                <button class="btn" id="start" onclick="start()">START</button>
+                <button class="btn" id="stop" onclick="pause()">PAUSE</button>
+                <button class="btn" id="reset" onclick="reset()">RESET</button>
+            </div>
+            <div class="savelap">
+                <button class="btn" id="save" onclick="save()">Save Lap</button>
+            </div>
+        </div>
+	</div>
+
+	<script>
+
+        let minute = 00;
+        let second = 00;
+        let count = 00;
+
+        function start() {
+            timer = true;
+            stopWatch();
+        }
+
+        function pause() {
+            timer = false;
+        }
+
+        function reset() {
+            timer = false;
+            minute = 0;
+            second = 0;
+            count = 0;
+            document.getElementById('min').innerHTML = "00";
+            document.getElementById('sec').innerHTML = "00";
+            document.getElementById('count').innerHTML = "00";
+            document.getElementById('lap').innerHTML = "";
+        };
+
+        function save(){
+
+            let minString = minute;
+            let secString = second;
+            let countString = count;
+            if (minute < 10) minString = "0" + minute;
+            if (second < 10) secString = "0" + second;
+            if (count < 10) countString = "0" + count;
+
+            let x = '<span class="added">' + minString + ':' + secString + ':' + countString + '</span>';
+            document.getElementById('lap').innerHTML += x;
+        }
+
+        function stopWatch() {
+            if (timer) 
+            {
+                count++;
+                if (count == 100) {
+                    second++;
+                    count = 0;
+                }
+
+                if (second == 60) {
+                    minute++;
+                    second = 0;
+                }
+
+                let minString = minute;
+                let secString = second;
+                let countString = count;
+
+                if (minute < 10) minString = "0" + minString;
+                if (second < 10) secString = "0" + secString;
+                if (count < 10) countString = "0" + countString;
+
+                document.getElementById('min').innerHTML = minString;
+                document.getElementById('sec').innerHTML = secString;
+                document.getElementById('count').innerHTML = countString;
+                setTimeout(stopWatch, 10);
+            }
+        }
+    </script>
+</body>
+
+</html>
