@@ -23,7 +23,6 @@
             color: #158a56;
         }
 
-
         #buttons {
             margin: 20px;
         }
@@ -58,7 +57,6 @@
         .savelap .btn{
             width: 350px;
         }
-
     </style>
 </head>
 
@@ -87,16 +85,16 @@
         let second = 00;
         let count = 00;
 
-        function start() {
+        function start(){
             timer = true;
             stopWatch();
         }
 
-        function pause() {
+        function pause(){
             timer = false;
         }
 
-        function reset() {
+        function reset(){
             timer = false;
             minute = 0;
             second = 0;
@@ -120,8 +118,8 @@
             document.getElementById('lap').innerHTML += x;
         }
 
-        function stopWatch() {
-            if (timer) 
+        function stopWatch(){
+            if (timer)
             {
                 count++;
                 if (count == 100) {
@@ -150,5 +148,4 @@
         }
     </script>
 </body>
-
 </html>
