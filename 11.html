@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exp-11</title>
+    </head>
+    <body>
+        <h1 onclick="change()"><center>Click me to change my color!</center></h1>
+        <script>
+            function change(){
+                r = Math.floor(Math.random()*256);
+                g= Math.floor(Math.random()*256);
+                b = Math.floor(Math.random()*256);
+                bgCol = "rgb(" + r + "," + g + "," + b+")";
+                console.log(bgCol);
+                document.body.style.background = bgCol;
+            }
+        </script>
+    </body>
+</html>
