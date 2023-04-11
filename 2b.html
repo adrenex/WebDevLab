@@ -2,8 +2,120 @@
 <html>
     <head>
         <title>Exp-2b</title>
+        <style>
+            td{
+                text-align: center;
+            }
+
+            .periods{
+                background-color: pink;
+            }
+
+            .periods-title{
+                background-color: rgb(208, 208, 20);
+            }
+
+            .days-title{
+                background-color: rgb(181, 6, 6);
+            }
+
+            .days{
+                background-color: rgb(152, 150, 150);
+            }
+
+            .cyan{
+                background-color: cyan;
+            }
+
+            .dark-green{
+                background-color: green;
+            }
+
+            .yellow{
+                background-color: yellow;
+            }
+
+            .dark-yellow{
+                background-color: rgb(104, 122, 24);
+            }
+
+            .red{
+                background-color: red;
+            }
+
+
+        </style>
+
     </head>
     <body>
-        <h1 align=center>Government Polytechnic College</h1>
+        <h1 align=center>Government Polytechnic College<br>DEPARTMENT OF Computer Engineering<br>EFFECTIVE FROM: 01-07-2016</h1>
+        <table border="1" align="center" cellpadding="10px">
+            <caption align="left">Caption 1</caption>
+            <caption align="right">Caption 2</caption>
+            <thead>
+                <tr class="periods">
+                    <th class="periods-title" colspan="1">Periods</th>
+                    <th rowspan="2">1</th>
+                    <th rowspan="2">2</th>
+                    <th rowspan="2">3</th>
+                    <th rowspan="2">4</th>
+                    <th rowspan="2">5</th>
+                    <th rowspan="2">6</th>
+                    <th rowspan="2">7</th>
+                </tr>
+                <tr class="days-title">
+                    <th colspan="1">Days</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td class="days">Monday</td>
+                    <td>IT0302</td>
+                    <td>IT0306</td>
+                    <td>IT0304</td>
+                    <td>IT0306</td>
+                    <td>IT0302</td>
+                    <td colspan="2">IT0304</td>
+                </tr>
+
+                <tr>
+                    <td class="days">Tuesday</td>
+                    <td colspan="4" class="cyan">IT0320/IT0322</td>
+                    <td class="dark-yellow">IT0310</td>
+                    <td>IT0304</td>
+                    <td>IT0308</td>
+                </tr>
+
+                <tr>
+                    <td class="days">Wednesday</td>
+                    <td colspan="2" class="yellow">ELECTIVE - I</td>
+                    <td>IT0306</td>
+                    <td>IT0310</td>
+                    <td>IT0304</td>
+                    <td>IT0308</td>
+                    <td>COUN</td>
+                </tr>
+
+                <tr>
+                    <td class="days">Thursday</td>
+                    <td>IT0302</td>
+                    <td>IT0304</td>
+                    <td colspan="2">PD0302</td>
+                    <td colspan="3" class="dark-green">IT0320/IT0322</td>
+                </tr>
+
+                <tr>
+                    <td class="days">Friday</td>
+                    <td>IT0308</td>
+                    <td>IT0306</td>
+                    <td>8IT0308</td>
+                    <td>IT0302</td>
+                    <td colspan="2" class="red">ELECTIVE - I</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
     </body>
 </html>
