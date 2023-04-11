@@ -90,6 +90,12 @@
             stopWatch();
         }
 
+        // Using setInterval
+        //function start(){
+        //    timer = true;
+        //    const myInterval = setInterval(stopWatch, 10);
+        //}
+
         function pause(){
             timer = false;
         }
@@ -144,6 +150,9 @@
                 document.getElementById('sec').innerHTML = secString;
                 document.getElementById('count').innerHTML = countString;
                 setTimeout(stopWatch, 10);
+                // Using setInterval
+                //if(!timer)
+                //  clearInterval(myInterval);
             }
         }
     </script>
