@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exp-13</title>
+    </head>
+    <body>
+        <script>
+            var today = new Date();
+
+            //13a
+            var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+            var day = today.getDay();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+            var ampm = hour >= 12 ? 'PM' : 'AM';
+            hour = hour % 12;
+            hour = hour ? hour : 12;
+            var time = hour + ' ' + ampm + ' : ' + minute + ' : ' + second;
+            console.log('Today is : ' + daylist[day] + '.');
+            console.log('Current time is : ' + time);
+
+            //13b
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; 
+            var yyyy = today.getFullYear();
+            if(dd<10) 
+                dd='0'+dd;
+            if(mm<10) 
+                mm='0'+mm;
+            date = dd+'/'+mm+'/'+yyyy;
+            console.log(date);
+
+
+        </script>
+    </body>
+</html>

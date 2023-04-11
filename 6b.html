@@ -1,1 +1,100 @@
-<Doctype
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exp-6b</title>
+        <style>
+
+            .all{
+                width: 45%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            div{
+                padding-left: 2px;
+            }
+            .header, .footer, .menu, .navbar{
+                background-color: rgb(212, 164, 41);
+                border: 3px solid black;
+            }
+
+            .middle{
+                display: flex;
+                gap: 7px;
+            }
+
+            .main{
+                flex: 6;
+                display: flex;
+                flex-direction: column;
+                background-color: grey;
+                justify-content: space-around;
+                border: 3px solid black;
+                
+            }
+
+            .navbar{
+                margin: 5px 5px;
+                display: flex;
+            }
+
+            button, .box{
+                margin: 5px 5px;
+                background-color: cyan;
+                border: 3px solid black;
+            }
+
+            button{
+                padding-right: 50px;
+                border-radius: 10%;
+            }
+
+            .box{
+                height: 200px;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 150px; 
+            }
+
+            .menu{
+                flex: 1;
+            }
+
+            .footer{
+                height: 80%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="all">
+            <div class="header">
+                header
+            </div>
+    
+            <div class="middle">
+                <div class="menu">
+                    menu
+                </div>
+    
+                <div class="main">
+                    <div class="navbar">
+                        <button>tool 1</button>
+                        <button>tool 1</button>
+                        <button>tool 1</button>
+                        <p>nav bar with buttons</p>
+                    </div>
+    
+                    <div class="box">
+                        <p>map(through mapstraction if that matters)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                footer
+            </div>
+        </div>
+    </body>
+</html>
