@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exp-10</title>
+    </head>
+    <body> 
+        <div>
+            <button onclick="alertGive()">Give Alert</button>
+            <button onclick="funcPrompt()">Prompt</button>
+            <button onclick="funcConfirm()">Confirm</button>
+            <button onclick="openWindow()">Open Window</button>  
+            <button onclick="closeWindow()">Close Window</button> 
+            <button onclick="funcPrint()">Print</button> 
+        </div>
+        
+        <script>  
+            function alertGive(){
+                window.alert("Alert!!!"); 
+                console.log("Alerted")
+            }
+
+            function funcConfirm(){
+                console.log("Response on Confirm: ",confirm("Do you want to confirm?"));
+            }
+
+            function funcPrompt(){
+                var name = prompt("Enter your name:");
+                console.log("Name via Prompt: ", name);
+            }
+
+            function openWindow(){  
+                window.open('https://geu.ac.in');
+                console.log("New Window Opened");
+            }  
+
+            function closeWindow(){
+                window.close()  
+                console.log("Window CLosed so this wont be visible");
+            }
+            function funcPrint(){
+                window.print();
+                console.log("Print function called");
+            }
+        </script>  
+    </body>  
+</html>

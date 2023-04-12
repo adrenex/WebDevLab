@@ -8,6 +8,7 @@
             var today = new Date();
 
             //13a
+            console.log("13a -> ")
             var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
             var day = today.getDay();
             var hour = today.getHours();
@@ -21,6 +22,7 @@
             console.log('Current time is : ' + time);
 
             //13b
+            console.log("13b -> ")
             var dd = today.getDate();
             var mm = today.getMonth()+1; 
             var yyyy = today.getFullYear();
@@ -31,7 +33,54 @@
             date = dd+'/'+mm+'/'+yyyy;
             console.log(date);
 
+            //13c
+            console.log("13c -> ")
+            var date_diff_indays = function(date1, date2) {
+                dt1 = new Date(date1);
+                dt2 = new Date(date2);
+                return (dt2-dt1)/(1000 * 60 * 60 * 24);
+            }
+            console.log(date_diff_indays('04/02/2014', '11/04/2014'));
+            console.log(date_diff_indays('12/02/2014', '11/04/2014'));
 
+            //13d
+            console.log("13d -> ")
+            function days_passed(dt) {
+                var current = new Date(dt.getTime());
+                var previous = new Date(dt.getFullYear(), 0, 1);
+                return Math.ceil((current - previous + 1) / (1000 * 60 * 60 * 24));
+            }
+            console.log(days_passed(new Date(2015, 0, 15)));
+            console.log(days_passed(new Date(2015, 11, 14)));
+
+            //13e
+            console.log("13e -> ")
+            for (var year = 2014; year <= 2050; year++)
+            {
+                var d = new Date(year, 0, 1);
+                if (d.getDay() === 0 )
+                    console.log("1st January is being a Sunday  "+year);
+            }
+
+            //13f
+            console.log("13f -> ")
+            let christmasYear = today.getFullYear();
+            if (today.getMonth() == 11 && today.getDate() > 25)
+                christmasYear = christmasYear + 1;
+            let christmasDate = new Date(christmasYear, 11, 25);
+            let days = Math.ceil((christmasDate.getTime() - today.getTime()) /(1000 * 60 * 60 * 24));
+            console.log(days);
+
+            //13g
+            console.log("13g -> ")
+            var myBirthday, today, bday, diff, daysleft;
+            today = new Date();
+            bday = new Date(today.getFullYear(),5,23);
+            if( today.getTime() > bday.getTime())
+                bday.setFullYear(bday.getFullYear()+1);
+            diff = bday.getTime()-today.getTime();
+            daysleft = Math.floor(diff/(1000*60*60*24));
+            console.log(daysleft);
         </script>
     </body>
 </html>
