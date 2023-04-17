@@ -28,12 +28,12 @@
     <h1 align="center">Javascript Calculator</h1>
     <table align="center" class="title" id="calc">
         <tr>
-            <td colspan="4"><input type="text" id="display" name="disp" onkeypress="return event.charCode>=48 && event.charCode<=57"></td>
+            <td colspan="4"><input type="text" id="display""></td>
         </tr>
         <tr>
-            <td><input type="button" id="btn" value="7" onclick="document.getElementById('display').value += '7'"></td> 
+            <td><button id="btn" value="7" onclick="document.getElementById('display').value += 'Math.pow('">sqrt</button></td> 
             <td><input type="button" id="btn" value="8" onclick="document.getElementById('display').value += '8'"></td>
-            <td><input type="button" id="btn" value="9" onclick="document.getElementById('display').value += '9'"></td>
+            <td><input type="button" id="btn" value="9" onclick="document.getElementById('display').value += ','"></td>
             <td><input type="button" id="btn" value="+" onclick="document.getElementById('display').value += '+'"></td>
         </tr>
         <tr>
@@ -51,8 +51,8 @@
         <tr>
             <td><input type="button" id="btn" value="0" onclick="document.getElementById('display').value += '0'"></td>
             <td><input type="button" id="btn" value="%" onclick="document.getElementById('display').value += '%'"></td>
-            <td><input type="button" id="btn" value="." onclick="document.getElementById('display').value += '.'"></td>
-            <td><input type="button" id="btn" value="/" onclick="document.getElementById('display').value += '/'"></td>
+            <td><input type="button" id="btn" value="." onclick="document.getElementById('display').value += 'Math.sqrt('"></td>
+            <td><input type="button" id="btn" value="/" onclick="document.getElementById('display').value += ')'"></td>
         </tr>
         <tr>
             <td colspan="2"><input type="button" id="btn" value="C" onclick="document.getElementById('display').value =''"></td>

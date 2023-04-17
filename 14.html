@@ -119,7 +119,8 @@
             if (second < 10) secString = "0" + second;
             if (count < 10) countString = "0" + count;
 
-            let x = '<span class="added">' + minString + ':' + secString + ':' + countString + '</span>';
+            let x = `<span class="added"> ${minString} : ${secString} : ${countString} </span>`;
+            console.log(x);
             document.getElementById('lap').innerHTML += x;
         }
 

@@ -10,9 +10,12 @@
                 r = Math.floor(Math.random()*256);
                 g= Math.floor(Math.random()*256);
                 b = Math.floor(Math.random()*256);
-                bgCol = "rgb(" + r + "," + g + "," + b+")";
+                bgCol = "rgb(" + r + "," + g + "," + b + ")";
                 console.log(bgCol);
-                document.body.style.background = bgCol;
+                const ele = document.getElementsByTagName("h1");
+                console.log(ele[0]);
+
+                ele[0].style.background = bgCol;
             }
         </script>
     </body>
