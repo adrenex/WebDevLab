@@ -83,10 +83,14 @@
         let minute = 00;
         let second = 00;
         let count = 00;
+        let timer = false;
 
         function start(){
-            timer = true;
-            stopWatch();
+            if(timer === false)
+            {
+                timer = true;
+                stopWatch();
+            }
         }
 
         // Using setInterval
