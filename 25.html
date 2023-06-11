@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News Page with Weather Sidebar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            // Function to update weather data
+            function updateWeather() 
+            {
+                $.getJSON('25.json', function(data) 
+                {
+                    // Extract relevant weather information from the JSON data
+                    var temperature = data.temp.day;
+                    var weatherDescription = data.weather[0].description;
+                    var weatherIcon = data.weather[0].icon;
+                    // Update weather display on the sidebar
+                    $('#temperature').html(temperature + ' &deg;C');
+                    $('#weather-description').html(weatherDescription);
+                    $('#weather-icon').attr('src', 'icons/' + weatherIcon + '.png');
+                });
+            }
+            // Update weather every 60 seconds
+            setInterval(updateWeather, 60);
+            // Initial weather update on page load
+            $(document).ready(function() 
+            {
+                updateWeather();
+            });
+        </script>
+        <style>
+            /* CSS styles for the sidebar */
+            #sidebar {
+            width: 200px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            }
+            #weather {
+            margin-bottom: 20px;
+            }
+            #weather img {
+            width: 50px;
+            height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sidebar">
+            <div id="weather">
+                <h2>Weather</h2>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature"></p>
+                <p id="weather-description"></p>
+            </div>
+            <div id="other-sidebar-content">
+                <!-- Other sidebar content goes here -->
+            </div>
+        </div>
+        <div id="main-content">
+        <!-- News articles and main content go here -->
+        </div>
+    </body>
+</html>

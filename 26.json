@@ -1,0 +1,23 @@
+{
+    "stdID": "0106",
+    "stdData": 
+    {
+        "stdName": "Mirwaise",
+        "stdAge": "23",
+        "stdGender": "Male",
+        "stdNo": "12345",
+        "stdAddress": 
+        {
+                "stdStreet": "786 Street",
+                "stdCity": "Riyadh",
+                "stdCountry": "Saudi Arabia",
+                "stdPostal": "98765"
+        }
+    },
+    "stdEdu": 
+    {
+        "stdDept": "Computer Science",
+        "stdSemester": "8",
+        "stdMajor": "Web Programming"
+    }
+}

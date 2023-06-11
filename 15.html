@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        echo "Welcome to PHP"
+    ?>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form method="post">
+            <h1>Enter a number</h1>
+            <input type="number" name="num">
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <?php
+            if(isset($_POST['submit']))
+            {
+                $num=$_POST['num'];
+                if($num% 2 == 0)
+                {
+                    echo $num ," is Even Number";
+                }
+                else
+                {
+                    echo $num , " is Odd Number";
+                }
+            }
+        ?>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    <form action="" method="post">
+        <h1>Enter first number</h1>
+        <input type="number" placeholder="Enter first number" name="num1">
+        <br>
+        <h1>Enter second number</h1>
+        <input type="number" placeholder="Enter second number" name="num2">
+        <br>
+        <h1>Enter first number</h1>
+        <input type="number" placeholder="Enter third number" name="num3">
+        <br><br>
+        <input type="submit" value="Find Maximum" name="submit" >
+    </form>
+    <?php
+    if(isset($_POST['submit']))
+    {
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+        $num3 = $_POST['num3'];
+        $max;
+        if($num1 > $num2)
+        {
+            $max = $num1;
+        }
+        else
+        {
+            $max = $num2;
+        }
+        if($max < $num3)
+        {
+            $max = $num3;
+        }
+        echo "Maximum Number is : ",$max;
+    }
+    ?>
+    </body>
+</html
